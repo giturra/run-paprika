@@ -26,7 +26,7 @@ def logging_call(popenargs, **kwargs):
         check_io()
 
 
-def main(jar, plaforms, db):
+def main(jar, db):
     logging_call(
         ['java', '-Xmx2G', '-XX:+UseConcMarkSweepGC', '-jar', jar, 
         'query', '-db', db, '-d', '-r', 'ALLAP']
@@ -37,9 +37,9 @@ if __name__ == "__main__":
     try:
         curr_dir = os.getcwd()
         step = os.sep
-        jar = f'{curr_dir}{step}td{step}paprika{step}build{step}libs{step}Paprika.jar'
-        platforms = '/mnt/c/Users/giturra/AppData/Local/Android/Sdk/platforms'
+        jar = f'{curr_dir}{step}paprika{step}build{step}libs{step}Paprika.jar'
         db = f'{curr_dir}{step}{sys.argv[1]}'
-        main(jar, platforms, db)
+        print(db)
+        main(jar, db)
     except KeyboardInterrupt:
         logging.warning("Stopping...")
