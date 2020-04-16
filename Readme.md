@@ -1,46 +1,15 @@
 # Scripts para ejecutar Paprika
-## Plataforma de Monitores de Emprendimientos para OpenBeauchef
 
-Este repositorio contiene el proyecto de Ingeniería de Software II (CC-5401) de la FCFM. 
+Este repositorio contiene dos script para ejecutar los comandos de paprika. El primero llamado ```analyser.py``` para lanzar la ejecución
+del análsis de una aplicación y el segundo ```analyser.py``` para ejecutar las consultas. 
 
-## El proyecto esta estructurado de la siguiente manera:
+## Análisis de un grupo de aplicaciones:
 
- ```  
-|-- monitor-de-emprendimientos-para-openbeauchef
-|   |-- opendata
-|   |   |-- settings.py
-|   |   |-- urls.py
-|   |   `-- wsgi.py 
-|   |-- emprendimientos
-|   |   |-- admin.py
-|   |   |-- apps.py
-|   |   |-- models.py
-|   |   |-- templates
-|   |   |-- tests.py
-|   |   |-- urls.py
-|   |   `-- views.py
-|   |-- ficha
-|   |   |-- admin.py
-|   |   |-- apps.py
-|   |   |-- models.py
-|   |   |-- templates
-|   |   |-- tests.py
-|   |   |-- urls.py
-|   |   `-- views.py
-|   |-- personas
-|   |   |-- admin.py
-|   |   |-- apps.py
-|   |   |-- models.py
-|   |   |-- templates
-|   |   |-- tests.py
-|   |   |-- urls.py
-|   |   `-- views.py
-|   |-- manage.py
-|	|-- static
-|   |-- templates
-|-- README.md
-|-- requirements.txt
- ```
+Para ejecutar el análisis de un grupo de aplicaciones se deben cumplir ciertos requerimientos para su correcto funcionamiento:
+
+* Un directorio con un grupo de aplicaciones. En el repositorio viene un grupo de seis aplicaciones.
+
+* El repositorio de paprika de encontrarse al mismo nivel que el archivo ```analyser.py```
 
 El proyecto principal se encuentra en la carpeta monitor-de-emprendimientos-para-openbeauchef, que contiene las configuraciones globales del proyecto en ```settings.py```, las urls por defecto que mappeara django desde los request estarán en el archivo ```urls.py```.
 
